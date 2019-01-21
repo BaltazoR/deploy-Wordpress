@@ -1,0 +1,9 @@
+---
+
+- name: Deploy Wordpress
+  hosts: Development
+
+  roles:
+    - LAMP
+    - Create_DB
+    - Wordpress
