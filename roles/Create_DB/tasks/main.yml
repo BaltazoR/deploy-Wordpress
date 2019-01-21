@@ -1,0 +1,20 @@
+---
+# tasks Create_DB
+
+- name: install dependency
+  apt: name=python3-pymysql state=present update_cache=true
+  become: yes
+
+- name: Create mysql database
+  mysql_db: 
+    login_unix_socket: /var/run/mysqld/mysqld.sock 
+    name: '{{ wp_mysql_db }}' 
+    state: present
+
+  
+- name: Create mysql user
+  mysql_user:
+    login_unix_socket=/var/run/mysqld/mysqld.sock
+    name={{ wp_mysql_user }} 
+    password={{ wp_mysql_password }}
+    priv=*.*:ALL
