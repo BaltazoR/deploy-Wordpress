@@ -1,0 +1,13 @@
+[Development]
+localhost ansible_connection=local
+
+[Development:vars]
+ansible_python_interpreter=/usr/bin/python3
+wp_mysql_db=wordpress
+wp_mysql_user=wordpress
+wp_mysql_password=90lNIw2wR)Px[&9I&
+site_url=192.168.56.101
+site_title=test task
+site_admin_user=mev
+site_admin_password=J6NOq9d2
+site_admin_email=1@1.com
